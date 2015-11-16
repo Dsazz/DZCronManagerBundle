@@ -1,0 +1,21 @@
+{
+    "name": "dz/cron-manager-bundle",
+    "type": "symfony-bundle",
+    "description": "Flexible cron manager bundle for Symfony2",
+    "keywords": ["cron management"],
+    "homepage": "http://github.com/Dsazz/DZCronManagerBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stepanenko Stanislav",
+            "email": "dsazztazz@gmail.com",
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.7",
+    },
+    "autoload": {
+        "psr-0": { "DZ\\CronManagerBundle": "" }
+    },
+    "target-dir": "DZ/CronManagerBundle"
+}
