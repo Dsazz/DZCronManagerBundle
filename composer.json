@@ -2,7 +2,7 @@
     "name": "dz/cron-manager-bundle",
     "type": "symfony-bundle",
     "description": "Flexible cron manager bundle for Symfony2",
-    "keywords": ["cron management"],
+    "keywords": ["symfony", "cron management"],
     "homepage": "http://github.com/Dsazz/DZCronManagerBundle",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     "require": {
         "symfony/symfony": "~2",
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "autoload": {
         "psr-0": { "DZ\\CronManagerBundle": "" }
     },
