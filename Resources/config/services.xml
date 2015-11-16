@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="dz_cron.manager.class">DZ\CronManagerBundle\Manager\CronManager</parameter>
+        <parameter key="dz_cron.form.type.cron.class">DZ\CronManagerBundle\Form\Type\CronType</parameter>
+        <parameter key="dz_cron.entity.cron.class">DZ\CronManagerBundle\Entity\Cron</parameter>
+    </parameters>
+
+    <services>
+        <service id="dz_cron.manager" class="%dz_cron.manager.class%" />
+        <service id="dz_cron.entity.cron" class="%dz_cron.entity.cron.class%" />
+
+        <service id="dz_cron.form.type.cron" class="%dz_cron.form.type.cron.class%">
+            <tag name="form.type" alias="cron" />
+        </service>
+
+        <service id="dz_cron.form.cron" factory-method="createNamed" factory-service="form.factory" class="Symfony\Component\Form\Form">
+            <argument>cron_form</argument> <!-- name of the form -->
+            <argument>cron</argument>      <!-- alias of the form type -->
+            <argument>null</argument>      <!-- data to bind, this is where your entity could go if you have that defined as a service -->
+            <argument type="collection">   <!-- validation groups -->
+                <argument key="validation_groups">Default</argument>
+            </argument>
+        </service>
+    </services>
+    
+</container>
