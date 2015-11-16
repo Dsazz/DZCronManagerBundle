@@ -5,6 +5,7 @@
     "keywords": ["symfony", "cron management"],
     "homepage": "http://github.com/Dsazz/DZCronManagerBundle",
     "license": "MIT",
+    "version": "dev-master",
     "authors": [
         {
             "name": "Stepanenko Stanislav",
