@@ -1,8 +1,8 @@
 <?php
 
-namespace Roro\Bundle\CronBundle\Tests\Manager;
+namespace  DZ\CronManagerBundle\Tests\Manager;
 
-use Roro\Bundle\CronBundle\Manager\CronManager;
+use  DZ\CronManagerBundle\Manager\CronManager;
 
 class CronManagerTest extends \PHPUnit_Framework_TestCase
 {
