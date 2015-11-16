@@ -1,8 +1,8 @@
 <?php
 
-namespace Roro\Bundle\CronBundle\Tests\Entity;
+namespace DZ\CronManagerBundle\Tests\Entity;
 
-use Roro\Bundle\CronBundle\Entity\Cron;
+use DZ\CronManagerBundle\Entity\Cron;
 
 class CronTest extends \PHPUnit_Framework_TestCase
 {
