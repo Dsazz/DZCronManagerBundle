@@ -1,5 +1,5 @@
 {
-    "name": "dz/cron-manager-bundle",
+    "name": "dz/easy-cron-manager",
     "type": "symfony-bundle",
     "description": "Flexible cron manager bundle for Symfony2",
     "keywords": ["symfony", "cron management"],
