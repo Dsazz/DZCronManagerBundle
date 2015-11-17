@@ -10,7 +10,7 @@ Setting up DZCronManagerBundle
 The first step is to tell composer that you want to download DZCronManagerBundle which can be achieved by typing the following at the command prompt:
 
 ```bash
-$ php composer.phar require dz/cron-manager-bundle
+$ php composer.phar require dz/easy-cron-manager
 ```
 
 ### Step 2 - Enable the bundle in your kernel
