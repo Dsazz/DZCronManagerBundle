@@ -54,13 +54,13 @@ class CronController extends Controller
      */
     public function listAction(Request $request)
     {
-        $cronManager = $this->get('roro_cron.manager');
+        $cronManager = $this->get('dz_cron.manager');
         $cronManager->parseCronFile();
 
         $this->addFlash('message', $cronManager->getOutput()); //Gets the output of crontab
         $this->addFlash('error', $cronManager->getError()); //Gets the error of crontab
 
-        $form = $this->get( 'roro_cron.form.cron' );
+        $form = $this->get('dz_cron.manager');
         return $this->render(/*list of cron page*/, array(
             'crons' => $cronManager->getCrons(), //Gets the collections of crons
             'raw'   => $cronManager->getRaw(),  //Gets a representation of the cron table file
@@ -75,7 +75,7 @@ class CronController extends Controller
      */
     public function addAction(Request $request)
     {
-        $cronManager = $this->get('roro_cron.manager');
+        $cronManager = $this->get('dz_cron.manager');
         $cronManager->parseCronFile();
 
         $cron = $cronManager->create(); //Create cron instance
@@ -198,7 +198,7 @@ class CronController extends Controller
      */
     public function deleteAction($id, Request $request = null)
     {
-        $cronManager = $this->get('roro_cron.manager');
+        $cronManager = $this->get('dz_cron.manager');
 
         $cronManager->parseCronFile();
         $this->addFlash('message', $cronManager->getOutput());
@@ -223,7 +223,7 @@ class CronController extends Controller
      */
     public function logFileAction($id, $type)
     {
-        $cronManager = $this->get('roro_cron.manager');
+        $cronManager = $this->get('dz_cron.manager');
         $cronManager->parseCronFile();
 
         $cron = $cronManager->getCrons()->get($id);
